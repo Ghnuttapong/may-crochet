@@ -80,3 +80,13 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
+
+@media (max-width: 500px) {
+  .container-hero .overlay .overlay-text .text-detail {
+    width: auto;  
+  }
+
+  .container-hero .overlay, .container-hero .overlay .overlay-text {
+    position: unset;
+  }
+}
