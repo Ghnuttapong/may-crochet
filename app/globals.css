@@ -46,7 +46,7 @@ body {
 }
 
 .container-hero .overlay .overlay-text .text-detail {
-  width: 600px;  
+  max-width: 550px;  
 }
 
 .container-hero .customSwiper {
@@ -56,6 +56,10 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+.container-hero .customSwiper img {
+  min-height: 100vh;
 }
 
 .btn-menu {
@@ -77,13 +81,13 @@ body {
   background: #fff;
 }
 
-.overlay .logo {
+/* .overlay .logo .imageLogo {
   width: 60px;
   height: 60px;
   display: block;
   border-radius: 10px;
   overflow: hidden;
-}
+} */
 
 .customLightGallery {
   display: flex;
@@ -143,12 +147,17 @@ body {
   object-fit: cover;
 }
 
-@media (max-width: 600px) {
-  .container-hero .overlay .overlay-text .text-detail {
-    width: auto;  
+@media (max-width: 767px) {
+  .container-hero .overlay {
+    padding: 0;
+  }
+
+  .container-hero .overlay .overlay-text {
+    margin-top: 15px;
   }
 
   .container-hero .overlay, .container-hero .overlay .overlay-text {
     position: unset;
+    padding-bottom: 30px;
   }
 }

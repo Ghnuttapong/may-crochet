@@ -10,10 +10,11 @@ export default function HeroComponent() {
 
     return (
         <Box component="div" className="container-hero h-100" id="home">
-            <Box pt={20} component="div" className="overlay">
-                <Box component="a" href="/" className="logo">
-                    <Image src="images/logo.jpg" alt="Crochet by Mniratch" />
-                </Box>
+            <Box pt={30} component="div" className="overlay">
+                <Flex align="center" gap={10} component="a" href="/" className="logo underline-none">
+                    <Image src="images/logo.jpg" className="imageLogo" w={70} h={70} radius="50%" alt="Crochet by Mniratch" />
+                    <Title order={2} c="white" >Crochet by Mniratch</Title>
+                </Flex>
 
                 <Flex justify="center" align="center" className="overlay-text">
                     <Card
@@ -25,7 +26,7 @@ export default function HeroComponent() {
                             งานไหมพรมโครเชต์
                         </Title>
 
-                        <Text ta="center" mt="xs" c="white" className="text-detail">
+                        <Text ta="center" mt="xs" c="white" lineClamp={3} className="text-detail" title="ไหมพรมโคเชรต์ มีความแข็งแรงและทนทาน เป็นพรมที่มีคุณภาพที่ดีที่สุด ทุกชิ้นงาน Crochet ที่จัดทำที่นี่มีการออกแบบที่หลากหลาย ทั้งจากหมวดการ์ตูนที่นิยม เทศกาลต่างๆ หรือ ของขวัญสำหรับคนพิเศษ">
                             ไหมพรมโคเชรต์ มีความแข็งแรงและทนทาน เป็นพรมที่มีคุณภาพที่ดีที่สุด ทุกชิ้นงาน Crochet ที่จัดทำที่นี่มีการออกแบบที่หลากหลาย ทั้งจากหมวดการ์ตูนที่นิยม เทศกาลต่างๆ หรือ ของขวัญสำหรับคนพิเศษ
                         </Text>
 
