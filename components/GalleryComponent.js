@@ -1,7 +1,7 @@
-import { Box, Flex, SimpleGrid, Title } from '@mantine/core'
+import { Box, Flex, Image, SimpleGrid, Title } from '@mantine/core'
 import React, { Fragment, useEffect } from 'react'
-
 import LightGallery from 'lightgallery/react';
+import { IoImages } from "react-icons/io5";
 
 // import styles
 import 'lightgallery/css/lightgallery.css';
@@ -58,6 +58,11 @@ export default function GalleryComponent() {
                         >
                             {dataGalleryList.map((ele, index) => (
                                 <a href={ele.src} key={index}>
+                                    <span className='overlay'>
+                                        <span className='icon'>
+                                            <IoImages size={20} />
+                                        </span>
+                                    </span>
                                     <img alt={ele.alt} src={ele.src} />
                                 </a>
                             ))}
