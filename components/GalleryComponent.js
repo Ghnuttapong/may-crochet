@@ -49,7 +49,7 @@ export default function GalleryComponent() {
     return (
         <Fragment>
             <Box component='div' className='h-100' pt={40} bg={'#f9f8f7'} id='gallery'>
-                <Title ta="center" order={2}>แกลเลอรี่</Title>
+                <Title ta="center" order={2} data-aos="fade-up">แกลเลอรี่</Title>
                 <Box pt={20}>
                     <LightGallery
                             elementClassNames="customLightGallery"
@@ -57,7 +57,7 @@ export default function GalleryComponent() {
                             plugins={[lgThumbnail, lgZoom]}
                         >
                             {dataGalleryList.map((ele, index) => (
-                                <a href={ele.src} key={index}>
+                                <a href={ele.src} key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                                     <span className='overlay'>
                                         <span className='icon'>
                                             <IoImages size={20} />

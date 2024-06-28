@@ -8,11 +8,11 @@ export default function AboutComponent() {
     <Flex justify="center" align="center" className='h-100' id='about' py={50}>
         <Container>
                 <SimpleGrid cols={{ base: 1, sm: 1, md: 2 }}>
-                    <Box component='div'>
+                    <Box component='div' data-aos="fade-up">
                         <Image radius="md" src="images/logo.jpg" width={400} height={400}  />
                     </Box>
 
-                    <Box component='div'>
+                    <Box component='div' data-aos="fade-up">
                         <Flex justify="center" h="100%" direction="column">
                             <Title order={2}>เกี่ยวกับ</Title>
                             <Text c="dark.2">ถักตุ๊กตาไหมพรม โครเชต์ งานฝีมือ จำหน่ายทั้งปลีกและส่งทั่วประเทศ</Text>

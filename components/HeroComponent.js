@@ -16,7 +16,7 @@ export default function HeroComponent() {
                     <Title order={2} c="white" >Crochet by Mniratch</Title>
                 </Flex>
 
-                <Flex justify="center" align="center" className="overlay-text">
+                <Flex justify="center" align="center" className="overlay-text" data-aos="fade-up">
                     <Card
                         shadow="sm"
                         padding="xl"
