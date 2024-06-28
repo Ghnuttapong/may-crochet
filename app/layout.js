@@ -1,10 +1,10 @@
 import { Inter, Kanit } from "next/font/google";
 import "@mantine/core/styles.css";
-
+import 'photoswipe/dist/photoswipe.css'
 import { createTheme, MantineProvider } from "@mantine/core";
 
 const inter = Inter({ subsets: ["latin"] });
-const kanit = Kanit({ subsets: ["thai", "latin"], weight: ["400", "500", "600"]})
+const kanit = Kanit({ subsets: ["thai", "latin"], weight: ["200", "400", "500", "600"]})
 
 const theme = createTheme({
   fontSmoothing: true,

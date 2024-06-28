@@ -1,7 +1,10 @@
 "use client";
-import "./globals.css";
+import GalleryComponent from "@/components/GalleryComponent";
+import AboutComponent from "@/components/AboutComponent";
 import HeroComponent from "@/components/HeroComponent";
 import MenuButton from "@/components/MenuButton";
+import "./globals.css";
+
 import { Fragment } from "react";
 
 export default function Home() {
@@ -9,6 +12,8 @@ export default function Home() {
     <Fragment>
         <HeroComponent />
         <MenuButton />
+        <AboutComponent />
+        <GalleryComponent />
     </Fragment>
   );
 }

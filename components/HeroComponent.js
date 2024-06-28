@@ -9,7 +9,7 @@ import 'swiper/css/effect-fade';
 export default function HeroComponent() {
 
     return (
-        <div className="container-hero" id="home">
+        <Box component="div" className="container-hero h-100" id="home">
             <Box pt={20} component="div" className="overlay">
                 <Box component="a" href="/" className="logo">
                     <Image src="images/logo.jpg" alt="Crochet by Mniratch" />
@@ -30,8 +30,8 @@ export default function HeroComponent() {
                         </Text>
 
                         <Box ta="center">
-                            <Button component="a" href="https://www.facebook.com/niratshoppingg" mt={10} variant="filled">
-                                <FaFacebook /> <Box component="span" ml={5} >ติดต่อสั่งซื้อ</Box>
+                            <Button component="a" href="https://www.facebook.com/niratshoppingg" mt={10} variant="filled" leftSection={<FaFacebook />}>
+                                ติดต่อสั่งซื้อ
                             </Button>
                         </Box>
                     </Card>
@@ -56,6 +56,6 @@ export default function HeroComponent() {
                     <Image src="images/carousel/image3.jpg" />
                 </SwiperSlide>
             </Swiper>
-        </div>
+        </Box>
     )
 }
