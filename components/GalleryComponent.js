@@ -27,7 +27,7 @@ export default function GalleryComponent() {
                 <Title ta="center" order={2}>แกลเลอรี่</Title>
                 <Box pt={20}>
                     <Gallery>
-                        <Flex wrap="wrap" className='galleryImages'>
+                        <Flex wrap="wrap" justify="center" className='galleryImages'>
                         {dataImages.map((ele, index) => (
                             <Box key={index}>
                                 <Item
