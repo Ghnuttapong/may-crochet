@@ -30,7 +30,7 @@ export default function HeroComponent() {
                         </Text>
 
                         <Box ta="center">
-                            <Button component="a" href="https://www.facebook.com/niratshoppingg" mt={10} variant="filled" leftSection={<FaFacebook />}>
+                            <Button component="a" target="_blank" href="https://www.facebook.com/niratshoppingg" mt={10} variant="filled" leftSection={<FaFacebook />}>
                                 ติดต่อสั่งซื้อ
                             </Button>
                         </Box>

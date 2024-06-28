@@ -1,53 +1,70 @@
 import { Box, Flex, SimpleGrid, Title } from '@mantine/core'
 import React, { Fragment, useEffect } from 'react'
 
+import LightGallery from 'lightgallery/react';
 
-import { Gallery, Item } from 'react-photoswipe-gallery'
+// import styles
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+
+// import plugins if you need
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
+
 
 export default function GalleryComponent() {
-    const dataImages = [
-        {
-            original: "images/carousel/image1.jpg",
-            thumbnail: "images/carousel/image1.jpg",
-        },
-        {
-            original: "images/carousel/image2.jpg",
-            thumbnail: "images/carousel/image2.jpg",
-        },
-        {
-            original: "images/carousel/image3.jpg",
-            thumbnail: "images/carousel/image3.jpg",
-        },
-    ]
 
-  return (
-    <Fragment>
-        {dataImages.length > 0 && (
-            <Box component='div' className='h-100' py={40} bg={'#f9f8f7'} id='gallery'>
+    const dataGalleryList = [
+        {
+            src: 'images/gallery/bag.jpg',
+            alt: 'กระเป๋าจิ๋ว',
+        },
+        {
+            src: 'images/gallery/bee.jpg',
+            alt: 'ตุ๊กตาผึ้ง',
+        },
+        {
+            src: 'images/gallery/crisamat.jpg',
+            alt: 'ตุ๊กตาคริสต์มาส',
+        },
+        {
+            src: 'images/gallery/dog.jpg',
+            alt: 'ตุ๊กตาหมาน้อย',
+        },
+        {
+            src: 'images/gallery/ghost.jpg',
+            alt: 'ตุ๊กตาผีฮาโลวีน',
+        },
+        {
+            src: 'images/gallery/chicken.jpg',
+            alt: 'ตุ๊กตาไก่',
+        },
+        // {
+        //     src: 'images/gallery/clound.jpg',
+        //     alt: 'ตุ๊กตาก้อนเมฆ',
+        // }
+    ];
+    
+    return (
+        <Fragment>
+            <Box component='div' className='h-100' pt={40} bg={'#f9f8f7'} id='gallery'>
                 <Title ta="center" order={2}>แกลเลอรี่</Title>
                 <Box pt={20}>
-                    <Gallery>
-                        <Flex wrap="wrap" justify="center" className='galleryImages'>
-                        {dataImages.map((ele, index) => (
-                            <Box key={index}>
-                                <Item
-                                    id={index}
-                                    original={ele.original}
-                                    thumbnail={ele.thumbnail}
-                                    width="1024"
-                                    height="768"
-                                >
-                                    {({ ref, open }) => (
-                                        <img ref={ref} onClick={open} src={ele.thumbnail} />
-                                    )}
-                                </Item>
-                            </Box>
-                        ))}
-                        </Flex>
-                    </Gallery>
+                    <LightGallery
+                            elementClassNames="customLightGallery"
+                            speed={500}
+                            plugins={[lgThumbnail, lgZoom]}
+                        >
+                            {dataGalleryList.map((ele, index) => (
+                                <a href={ele.src} key={index}>
+                                    <img alt={ele.alt} src={ele.src} />
+                                </a>
+                            ))}
+                    </LightGallery>
                 </Box>
             </Box>
-        )}
-    </Fragment>
-  )
+
+        </Fragment>
+    )
 }

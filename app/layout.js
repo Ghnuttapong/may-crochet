@@ -1,6 +1,5 @@
 import { Inter, Kanit } from "next/font/google";
 import "@mantine/core/styles.css";
-import 'photoswipe/dist/photoswipe.css'
 import { createTheme, MantineProvider } from "@mantine/core";
 
 const inter = Inter({ subsets: ["latin"] });

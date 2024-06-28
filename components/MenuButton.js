@@ -26,18 +26,21 @@ const MenuButton = () => {
 				href="#home"
 				label="หน้าแรก"
 				leftSection={<AiOutlineHome size="1rem" stroke={1.5} />}
+        onClick={close}
 			/>
 
       <NavLink
 				href="#about"
 				label="เกี่ยวกับ"
 				leftSection={<AiOutlineInfoCircle size="1rem" stroke={1.5} />}
+        onClick={close}
 			/>
 
       <NavLink
 				href="#gallery"
 				label="แกลเลอรี่"
 				leftSection={<IoMdImages size="1rem" stroke={1.5} />}
+        onClick={close}
 			/>
 		</Box>
 		
