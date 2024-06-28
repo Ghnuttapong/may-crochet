@@ -55,6 +55,9 @@ export default function GalleryComponent() {
                             elementClassNames="customLightGallery"
                             speed={500}
                             plugins={[lgThumbnail, lgZoom]}
+                            closable
+                            showCloseIcon
+                            closeOnTap
                         >
                             {dataGalleryList.map((ele, index) => (
                                 <a href={ele.src} key={index} data-aos="fade-up" data-aos-delay={index * 100}>
